@@ -1,0 +1,1 @@
+{"id":8,"name":"250 mL Beaker","description":"Beaker. Has a capacity of 250cc and weight of 185g.","capacity":"200","used":1,"onShelf":1}

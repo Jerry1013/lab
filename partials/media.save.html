@@ -1,0 +1,49 @@
+<form novalidate name="mediaForm" class="form-horizontal">
+    <div class="modal-header">
+        <h3 class="modal-title">Save Media Form</h3>
+        <a href="" ng-click="close()" class="lab-modal-closeBtn"><i class="fa fa-times"></i></a>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Lab:</label>
+            <div class="col-lg-6">
+                <input class="form-control" ng-maxlength="20"  type="text" ng-model="media.lab" name="mediaLab" required>
+                <span class="error" ng-show="mediaForm.mediaLab.$error.required&&mediaForm.mediaLab.$dirty">This field required</span>
+                <span class="error" ng-show="mediaForm.mediaLab.$error.maxlength&&mediaForm.mediaLab.$dirty">Max length is 20 characters</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 control-label">Media title:</label>
+            <div class="col-lg-6">
+                <input class="form-control" type="text" ng-model="media.title" name="mediaTitle" required>
+                <span class="error" ng-show="mediaForm.mediaTitle.$error.required&&mediaForm.mediaTitle.$dirty">This field required</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-lg-3 control-label description-label">Description&nbsp;<a  popover="For instructor view only" class="question-tip" popover-trigger="mouseenter" href=""><span class="glyphicon glyphicon-question-sign"></span></a></label>
+            <div class="col-lg-6">
+                <textarea class="form-control" rows="3" ng-model="media.description" name="media.description"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-lg-3 control-label">Duration</label>
+            <div class="col-lg-6">
+                <input class="form-control"  id="user.phone"  ng-model="media.duration" name="media.duration">
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-lg-3 control-label">Position</label>
+            <div class="col-lg-6">
+                <input class="form-control"  ng-model="media.position" name="media.position">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-9 col-lg-offset-2">
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-disabled="mediaForm.$invalid" ng-click="saveMedia()">save</button>
+                    <button class="btn btn-warning" ng-click="close()">close11</button>
+                </div>
+            </div>
+        </div>
+</form>

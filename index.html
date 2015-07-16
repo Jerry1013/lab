@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en-US" ng-app="labApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="loading-spiner-holder" luma-loading>
+        <div class="eshop-loading"></div>
+     </div>
+<div class="container-fluid sub-header">
+	<div class="container">	
+		<div class="row">
+			<div class="col-md-9">
+				<span>Customizing Chemistry lab:</span>
+				<h2>Density</h2> 	
+				<ul  class="nav nav-pills ftab" role="tablist">
+				  <li ui-sref-active="active"><a ui-sref="manual">Manual</a></li>
+				  <li ui-sref-active="active"><a ui-sref="labMaterials">Lab Materials</a></li>
+				  <li ui-sref-active="active"><a ui-sref="media">Media</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<br>
+				<a href="#" class="btn-red">DONE CUSTOMIZING</a>
+			</div>			
+		</div>
+	</div>	
+</div>
+<div class="container">
+	<div class="tab-content">
+        <div ui-view></div>
+	</div>	
+</div>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="scripts/vendor/angular.js"></script>
+	<script src="scripts/vendor/angular-ui-router.js"></script>
+	<script src="scripts/vendor/angular-animate.js"></script>
+	<script src="scripts/vendor/angular-resource.js"></script>
+    <script src="scripts/vendor/ui-bootstrap-tpls.js"></script>
+    <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/labMaterials.ctrl.js"></script>
+    <script src="scripts/controllers/manual.ctrl.js"></script>
+    <script src="scripts/controllers/manual.background.ctrl.js"></script>
+    <script src="scripts/controllers/manual.procedures.ctrl.js"></script>
+    <script src="scripts/controllers/labMaterials.containers.ctrl.js"></script>
+    <script src="scripts/controllers/labMaterials.instruments.ctrl.js"></script>
+    <script src="scripts/controllers/labMaterials.materials.ctrl.js"></script>
+    <script src="scripts/controllers/media.ctrl.js"></script>
+    <script src="scripts/controllers/media.save.ctrl.js"></script>
+    <script src="scripts/services/labMaterials.containers.service.js"></script>
+    <script src="scripts/services/labMaterials.instruments.service.js"></script>
+    <script src="scripts/services/labMaterials.materials.service.js"></script>
+    <script src="scripts/services/media.service.js"></script>
+    <script src="scripts/services/manual.background.service.js"></script>
+    <script src="scripts/services/manual.procedures.service.js"></script>
+    <script src="scripts/directives/labTinymce.directive.js"></script>
+    <script src="scripts/directives/labDropdownSearch.directive.js"></script>
+    <script src="scripts/directives/labScrollTop.directive.js"></script>
+    <script src="scripts/directives/lab.loading.js"></script>
+    <script src="scripts/filters/lab.searchbox.filter.js"></script>
+    <script src="scripts/config/router.js"></script>
+    <script src="scripts/config/config.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

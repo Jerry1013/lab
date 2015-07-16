@@ -1,0 +1,38 @@
+<div class="tab-pane fade in active" id="materials" ng-init="getMaterials()">
+<lab-dropdown-search
+   dropdown-list="dropdownList" search-type="type" search-text="searchText">
+</lab-dropdown-search>
+<div class="table-responsive" ng-show="filteredItems.length">
+    <table class="table dataTable">
+        <thead>
+        <tr>
+            <th  class="sorting"  ng-click="predicate = '-id'; reverse=!reverse">ID</th>
+            <th  class="sorting"  ng-click="predicate = '-name'; reverse=!reverse">Name</th>
+            <th  class="sorting"  ng-click="predicate = '-formula'; reverse=!reverse">Formula</th>
+            <th  class="sorting"  ng-click="predicate = '-type'; reverse=!reverse">Type</th>
+            <th  class="sorting"  ng-click="predicate = '-class'; reverse=!reverse">Class</th>
+            <th  class="sorting"  ng-click="predicate = '-flll'; reverse=!reverse">Flll</th>
+            <th>Used<a class="question-tip" popover="Utilized in lab environment" href="" popover-trigger="mouseenter"><span class="glyphicon glyphicon-question-sign"></span></a></th>
+            <th>On Shelf&nbsp;<a  popover="Appears on the shelf menu for use in the lab environment" class="question-tip" popover-trigger="mouseenter" href=""><span class="glyphicon glyphicon-question-sign"></span></a></th>
+            <th>In Container</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="material in filteredItems = (materials |  orderBy: predicate:reverse | searchBoxFilter : searchText : type)">
+                <td>{{material.id}}</td>
+                <td>{{material.name}}</td>
+                <td>{{material.formula}}</td>
+                <td>{{material.type}}</td>
+                <td>{{material.class}}</td>
+                <td>{{material.flll}}</td>
+                <td><input type="checkbox" ng-click="saveStatus(material)" ng-true-value="1" ng-false-value="0" ng-checked="material.used==1" ng-model="material.used"></td>
+                <td><input type="checkbox" ng-click="saveStatus(material)" ng-true-value="1" ng-false-value="0" ng-checked="material.onShelf==1"  ng-model="material.onShelf"></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <div ng-hide="filteredItems.length">
+      <alert class="repeat" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+</div>

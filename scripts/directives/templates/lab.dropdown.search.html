@@ -1,0 +1,8 @@
+<div class="filter">
+    <span class="ico glyphicon glyphicon-search"></span>
+    <input type="text" name="search" ng-model="searchText">
+    <a href="" ng-click="toggleList()">{{currentItem}}<span class="caret"></span></a>
+    <div ng-show="show" class="list-group lab-dropdown-search">
+        <a href="" ng-click="selectItem(item)" ng-repeat="item in dropdownList" class="list-group-item">{{item}}</a>
+    </div>
+</div>

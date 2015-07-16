@@ -1,0 +1,8 @@
+{
+     "id": 100,
+     "lab": "Density1",
+     "title": "My Uploaded Image1.",
+     "description": "An Image I uploaded2.",
+     "duration": 0,
+     "position": 2
+ }

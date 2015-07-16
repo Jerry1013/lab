@@ -1,0 +1,36 @@
+[{
+    "id": 6,
+    "name": "Graduated Cylinder.",
+    "description": "Graduated Cylinder. Has a capacity of 50 ml and weight of 54g.",
+    "capacity": 50,
+    "used": 1,
+    "onShelf": 0
+}, {
+    "id": 7,
+    "name": "250 mL Beaker.",
+    "description": "Beaker. Has a capacity of 250cc and weight of 185g.",
+    "capacity": 250,
+    "used": 1,
+    "onShelf": 1
+}, {
+    "id": 8,
+    "name": "250 mL Beaker",
+    "description": "Beaker. Has a capacity of 250cc and weight of 185g.",
+    "capacity": 200,
+    "used": 0,
+    "onShelf": 1
+}, {
+    "id": 9,
+    "name": "Graduated Cylinder.",
+    "description": "Graduated Cylinder. Has a capacity of 50 ml and weight of 54g.",
+    "capacity": 150,
+    "used": 0,
+    "onShelf": 0
+}, {
+    "id": 10,
+    "name": "250 mL Beaker",
+    "description": "Beaker. Has a capacity of 250cc and weight of 185g.",
+    "capacity": 300,
+    "used": 1,
+    "onShelf": 1
+}]

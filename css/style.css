@@ -1,0 +1,211 @@
+a{
+	color:#36A5B8;
+}
+a:hover{
+	text-decoration: none;	
+}
+.container{
+	max-width: 950px;
+}
+.header{
+	background-color:  #222;	
+}
+.header .logo{
+	float: left;
+	padding: 15px 0px 20px;
+	margin-right:30px;
+}
+#nav-top{
+	padding-top: 16px;
+}
+#nav-top li a{
+	text-shadow:none;
+	color: #767676;
+}
+#nav-top li a:focus{
+	background-color: initial;
+}
+#nav-top li.active a{
+	color: #fff;
+}
+#nav-top .nav .open > a, #nav-top .nav .open > a:hover, #nav-top .nav .open > a:focus, #nav-top li a:hover{
+	background-color: initial;
+	color: #fff;
+}
+#nav-top .dropdown-menu a{
+	color: #767676 !important;
+}
+.sub-header{
+	background-color: #36a5b8;
+	padding-top: 30px;
+}
+.sub-header span{
+	color: #a0def3;
+	font-size: 18px;
+	display: block;
+}
+.sub-header h2{
+	color: #fff;
+	font-weight: bold;
+	font-size: 40px;
+	margin: 2px 0px 15px;
+}
+.ftab li a{
+	color: #a0def3;
+	font-size: 18px;
+	padding: 10px 0px;
+	margin-right: 20px;
+}
+.ftab li.active a, .ftab li a:hover, .ftab li.active a:hover, .ftab li a:focus{
+	background-color: initial !important;
+	color: #fff;
+	border-bottom: 4px solid #1a6c78;
+}
+.tab-content{
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.mtab li a{
+	color: #36a5b8;
+}
+.mtab li.active a, .mtab li a:hover, .mtab li.active a:hover, .mtab li.active a:focus{
+	background-color: #36a5b8;
+	color: #fff;
+}
+.btn-red{
+	color: #fff;
+	background-color: #d94a3a;	
+	padding: 10px 24px;
+	display: inline-block;
+	border-radius: 5px;
+	font-weight: bold;	
+}
+.btn-red:hover, .btn-red:focus{
+	color: #fff;
+}
+.table th{
+	border-bottom: none !important;
+}
+#material{
+	position: relative;
+}
+.filter{
+	width: 380px;
+	position: absolute;
+	right: 2px;
+	top: 5px;
+}
+.filter input{
+	width: 75%;
+	margin: 0px;
+	border: 1px solid #CCC;
+	float: left;
+	padding: 7px 5px 7px 22px;
+}
+.filter span.ico{
+	position: absolute;
+	color: #9c9c9c;
+	left: 5px;
+	top: 11px;
+}
+.filter>a{
+	background-color: #9A9A9A;
+	color: #FFF;
+	padding: 8px 0px;
+	width: 25%;
+	text-align: center;
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.links a{
+	margin-right: 20px;
+}
+.delete{
+	font-weight: bold;
+	color: #999;
+}
+
+input.ng-dirty.ng-invalid,
+select.ng-dirty.ng-invalid{
+    border-color : #b94a48;
+}
+
+.input-group-btn button{
+    padding :11px;
+}
+
+span.error{
+    color : red;
+}
+
+.dataTable th[class*=sort] {
+    cursor: pointer;
+}
+
+.dataTable th[class*=sort]:after {
+    /*content: "\f0dc";*/
+    display: inline-block;
+    color: #555;
+    font-family: FontAwesome;
+    font-size: 13px;
+    font-weight: normal;
+    float: right;
+    margin-right: 4px;
+    position: relative;
+    margin-top : 2px;
+}
+
+.dataTable th.sorting_asc:after {
+    /*content: "\f0de";*/
+    top: 4px;
+}
+
+.dataTable th.sorting_desc:after {
+    /*content: "\f0dd";*/
+    top: -2px;
+}
+
+.lab-dropdown-search{
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    width: 25%;
+}
+
+.lab-pagination{
+    text-align: center;
+}
+
+.lab-modal-closeBtn{
+	position: absolute;
+	right: 10px;
+	top: 4px;
+	color: #666;
+}
+
+.repeat.ng-enter, .repeat.ng-leave {
+	  -webkit-transition:1s linear all;
+	  transition:1s linear all;
+	  opacity: 1;
+}
+
+.repeat.ng-leave.ng-leave-active {
+ /* The animation code itself */
+ 	 opacity: 0;
+}
+
+a.question-tip{
+    color : #ccc;
+}
+
+label.description-label{
+    padding-right: 0;
+}
+
+
+@media only screen and (max-width : 768px){
+	.header .logo{
+		float: none;
+	}
+}

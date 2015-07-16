@@ -1,0 +1,46 @@
+<div class="tab-pane in fade" id="media" ng-init="getMedia()">
+    <p align="right">
+        <a href="" ng-click="addMedia()" class="btn-red">+ADD MEDIA</a>
+    </p>
+    <div class="table-responsive">
+        <table class="table dataTable">
+            <thead>
+            <tr>
+                <th   class="sorting"  ng-click="predicate = '-id'; reverse=!reverse">Lab</th>
+                <th   class="sorting"  ng-click="predicate = '-title'; reverse=!reverse">Media Title</th>
+                <th   class="sorting"  ng-click="predicate = '-description'; reverse=!reverse">Description</th>
+                <th   class="sorting"  ng-click="predicate = '-duration'; reverse=!reverse">Duration</th>
+                <th   class="sorting"  ng-click="predicate = '-position'; reverse=!reverse">Position</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="medium in media | orderBy: predicate:reverse" 
+                    class="repeat">
+                    <td>{{medium.lab}}</td>
+                    <td>{{medium.title}}</td>
+                    <td>{{medium.description}}</td>
+                    <td>{{medium.duration}}</td>
+                    <td>{{medium.position}}</td>
+                    <td><button ng-click="deleteMedia(medium)" class="btn btn-xs btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                        <button ng-click="editMedia(medium ,$index)" class="btn btn-xs btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--
+    <div class="lab-pagination">
+        <pagination class="pagination"
+                    total-items="totalItems"
+                    items-per-page="pageSize"
+                    ng-model="currentPage"
+                    ng-change="pageChanged()">
+        </pagination>
+    </div>
+	-->
+</div>

@@ -1,0 +1,38 @@
+<div class="tab-pane fade in active" id="containers" ng-init="getContainers()">
+    <div class="table-responsive">
+        <table class="table dataTable">
+            <thead>
+            <tr>
+                <th class="sorting"  ng-click="predicate = '-id'; reverse=!reverse">ID</th>
+                <th class="sorting"   ng-click="predicate = '-name'; reverse=!reverse">Container</th>
+                <th  class="sorting"  ng-click="predicate = '-description'; reverse=!reverse">Description</th>
+                <th  class="sorting"  ng-click="predicate = '+capacity'; reverse=!reverse">Capacity</th>
+                <th>Used
+                    <a class="question-tip" popover="Utilized in lab environment" href="" popover-trigger="mouseenter"><span class="glyphicon glyphicon-question-sign"></span></a></th>
+                <th width="15%">On Shelf&nbsp;<a  popover="Appears on the shelf menu for use in the lab environment" class="question-tip" popover-trigger="mouseenter" href=""><span class="glyphicon glyphicon-question-sign"></span></a></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat = "container in containers | orderBy: predicate:reverse">
+                    <td>{{container.id}}</td>
+                    <td>{{container.name}}</td>
+                    <td>{{container.description}}</td>
+                    <td>{{container.capacity}}</td>
+                    <td><input type="checkbox" ng-click="saveStatus(container)" ng-true-value="1" ng-false-value="0" ng-model="container.used" ng-checked="container.used==1"></td>
+                    <td><input type="checkbox" ng-click="saveStatus(container)" ng-model="container.onShelf"  ng-checked="container.onShelf==1"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	<!--
+    <div class="lab-pagination">
+        <pagination class="pagination"
+                    total-items="totalItems"
+                    items-per-page="pageSize"
+                    ng-model="currentPage"
+                    ng-change="pageChanged()">
+        </pagination>
+    </div>
+	-->
+
+</div>

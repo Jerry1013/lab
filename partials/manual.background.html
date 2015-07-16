@@ -1,0 +1,9 @@
+<div ng-init="getBackground()" class="tab-pane fade in active" id="background" lab-scrolltop="{{date}}">
+	<div >
+	  <alert class="repeat" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+	</div>
+    <form method="post">
+        <textarea lab-tinymce ng-model="tiny.content"></textarea>
+    </form>
+    <p class="links"><br><a href="" ng-class="{'disabled' : tiny.content==''}" ng-click="save()" class="btn-red btn">Save</a><a href="#">Revert to original</a></p>
+</div>
